@@ -29,7 +29,7 @@ int main(void)
 
     while (1)
     {
-        printf("Digite a operacao desejada (+, 0):");
+        printf("Digite a operacao desejada (+, -, 0):");
         scanf("%c%*c", &op);
         num_op = 2;
 
@@ -38,6 +38,11 @@ int main(void)
         case '+':
             coleta_operandos(num_op, &num1, &num2);
             res = soma(num1, num2);
+            break;
+
+        case '-':
+            coleta_operandos(num_op, &num1, &num2);
+            res = subtracao(num1, num2);
             break;
 
         case '0':
